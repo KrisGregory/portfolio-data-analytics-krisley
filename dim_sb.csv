@@ -1,0 +1,12 @@
+﻿id_sb,descricao,comprimento_km,tipo_via
+1,SB-01 Curitiba - Mafra,23.4,Principal
+2,SB-02 Mafra - Lages,41.8,Principal
+3,SB-03 Lages - Ponta Grossa,67.2,Principal
+4,SB-04 Ponta Grossa - Apucarana,58.3,Desvio
+5,SB-05 Apucarana - Londrina,48.6,Principal
+6,SB-06 Londrina - Ourinhos,55.7,Principal
+7,SB-07 Ourinhos - Bauru,49.1,Desvio
+8,SB-08 Bauru - Campinas,60.0,Principal
+9,SB-09 Campinas - Santos,80.5,Principal
+10,SB-10 Araraquara - São Carlos,35.0,Desvio
+11,SB-11 São Carlos - Ribeirão Preto,50.0,Principal
