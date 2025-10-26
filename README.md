@@ -14,15 +14,15 @@ Demonstrar como dados operacionais podem ser transformados em **insights gerenci
 | Estrutura de Pastas | Descrição |
 |----------------------|------------|
 | `portfolio-data-analytics-gregory` | Pasta raiz do projeto |
-| ├── `data/` | Contém os arquivos de base simulada |
+| ├── `data_analytics/` | Contém os arquivos de base simulada |
 | │ ├── `fato_operacao_logistica.csv` | Base de fatos principal |
 | │ ├── `dim_sb.csv` | Dimensão dos trechos (SB) |
 | │ └── `dim_trem.csv` | Dimensão dos trens |
 | ├── `pbix/` | Dashboard final |
 | │ └── `Dashboard_Performance_Logistica.pbix` | Arquivo Power BI |
 | ├── `scripts/` | Simulação e tratamento de dados |
-| │ └── `simulacao_base_dados.ipynb` | Notebook Python |
-| ├── `images/` | Imagens e prévias do dashboard |
+| │ └── `Simulação de Dados - Performance Logística — Eficiência de Trens - Carga - Entregas.ipynb` | Notebook Python |
+| ├── `images -1.2.3/` | Imagens e prévias do dashboard |
 | │ └── `dashboard_preview.png` | Preview visual |
 | ├── `README.md` | Documentação do projeto
 
