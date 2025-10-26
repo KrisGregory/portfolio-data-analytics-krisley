@@ -9,6 +9,22 @@ O painel foi criado no Power BI e integra métricas de **saturação, tempo para
 ## Objetivo
 Demonstrar como dados operacionais podem ser transformados em **insights gerenciais e indicadores de eficiência**, apoiando a tomada de decisão em contextos logísticos reais.                
 
+---
+
+| Estrutura de Pastas | Descrição |
+|----------------------|------------|
+| `portfolio-data-analytics-gregory` | Pasta raiz do projeto |
+| ├── `data/` | Contém os arquivos de base simulada |
+| │ ├── `fato_operacao_logistica.csv` | Base de fatos principal |
+| │ ├── `dim_sb.csv` | Dimensão dos trechos (SB) |
+| │ └── `dim_trem.csv` | Dimensão dos trens |
+| ├── `pbix/` | Dashboard final |
+| │ └── `Dashboard_Performance_Logistica.pbix` | Arquivo Power BI |
+| ├── `scripts/` | Simulação e tratamento de dados |
+| │ └── `simulacao_base_dados.ipynb` | Notebook Python |
+| ├── `images/` | Imagens e prévias do dashboard |
+| │ └── `dashboard_preview.png` | Preview visual |
+| ├── `README.md` | Documentação do projeto
 
 ---
 
@@ -62,17 +78,4 @@ Análise & Governança de Dados | Inteligência Operacional
 
 
 
-| Estrutura de Pastas | Descrição |
-|----------------------|------------|
-| `performance-logistica-pbi/` | Pasta raiz do projeto |
-| ├── `data/` | Contém os arquivos de base simulada |
-| │ ├── `fato_operacao_logistica.csv` | Base de fatos principal |
-| │ ├── `dim_sb.csv` | Dimensão dos trechos (SB) |
-| │ └── `dim_trem.csv` | Dimensão dos trens |
-| ├── `pbix/` | Dashboard final |
-| │ └── `Dashboard_Performance_Logistica.pbix` | Arquivo Power BI |
-| ├── `scripts/` | Simulação e tratamento de dados |
-| │ └── `simulacao_base_dados.ipynb` | Notebook Python |
-| ├── `images/` | Imagens e prévias do dashboard |
-| │ └── `dashboard_preview.png` | Preview visual |
-| ├── `README.md` | Documentação do projeto
+
