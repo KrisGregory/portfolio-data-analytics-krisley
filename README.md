@@ -22,6 +22,7 @@ Demonstrar como dados operacionais podem ser transformados em **insights gerenci
 | │ └── `Dashboard_Performance_Logistica.pbix` | Arquivo Power BI |
 | ├── `scripts/` | Simulação e tratamento de dados |
 | │ └── `Simulação de Dados - Performance Logística — Eficiência de Trens - Carga - Entregas.ipynb` | Notebook Python |
+| │ └── data_quality_check.ipynb
 | ├── `images -1.2.3/` | Imagens e prévias do dashboard |
 | │ └── `dashboard_preview.png` | Preview visual |
 | ├── `README.md` | Documentação do projeto
