@@ -62,9 +62,22 @@ Cada página foi construída com foco em **clareza executiva, leitura analítica
 - **GitHub** – versionamento e portfólio público
 
 ---
+## 🧹 Data Quality Check
 
-## 📈 Próximos Passos
-- Adicionar módulo de **Data Quality**, avaliando consistência e completude das bases simuladas.  
+| Métrica | Resultado | Interpretação |
+|----------|------------|----------------|
+| **Completude Média** | 100% | Nenhum valor nulo encontrado nas colunas-chave |
+| **Saturações Inválidas** | 0% | Todas dentro da faixa esperada (≤150%) |
+| **Tempos Inválidos** | 0% | Nenhum tempo negativo ou inconsistente |
+| **Duplicados** | 0% | Cada operação é única por Trem + SB + Data |
+| **Integridade SB** | 100% | Todos os trechos da fato possuem correspondência na dimensão |
+| **Integridade Trem** | 100% | Todos os trens da fato possuem correspondência na dimensão |
+
+✅ As verificações indicam **dados consistentes, completos e bem modelados** para uso em análises operacionais e métricas de eficiência logística.
+
+
+---
+## 📈 Próximos Passos 
 - Publicar o dashboard online (Power BI Service ou Power BI Public).  
 - Integrar uma camada de governança com validação de metadados.
 
