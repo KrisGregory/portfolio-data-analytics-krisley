@@ -7,28 +7,7 @@ O painel foi criado no Power BI e integra métricas de **saturação, tempo para
 ---
 
 ## Objetivo
-Demonstrar como dados operacionais podem ser transformados em **insights gerenciais e indicadores de eficiência**, apoiando a tomada de decisão em contextos logísticos reais.
-
----
-
-## Estrutura do Projeto
-performance-logistica-pbi/
-│
-├── data/
-│   ├── fato_operacao_logistica.csv
-│   ├── dim_sb.csv
-│   └── dim_trem.csv
-│
-├── pbix/
-│   └── Dashboard_Performance_Logistica.pbix
-│
-├── scripts/
-│   └── simulacao_base_dados.ipynb   
-│
-├── images/
-│   └── dashboard_preview.png
-│
-├── README.md                     
+Demonstrar como dados operacionais podem ser transformados em **insights gerenciais e indicadores de eficiência**, apoiando a tomada de decisão em contextos logísticos reais.                
 
 
 ---
@@ -49,6 +28,15 @@ O painel é dividido em três visões:
 3. **Paradas e Anomalias:** análise do impacto das paradas sobre a eficiência operacional.
 
 Cada página foi construída com foco em **clareza executiva, leitura analítica e coerência visual**, seguindo boas práticas de Data Storytelling.
+
+## 🧠 Interpretação dos Indicadores
+
+| Situação | Leitura | Ação Recomendada |
+|-----------|----------|------------------|
+| ⬆️ Saturação + ⬇️ IEC | Trecho sobrecarregado – gargalo operacional. | Revisar janelas de cruzamento e balanceamento de fluxo. |
+| ⬆️ Tempo Parado + ⬇️ IEC | Perda de fluidez operacional. | Ações de manutenção e otimização logística. |
+| ⬆️ Saturação + ⬆️ IEC | Trecho ideal – uso intenso e eficiente. | Manter boas práticas. |
+| ⬇️ Saturação + ⬇️ IEC | Subutilização da capacidade. | Reavaliar demanda e programação. |
 
 ---
 
