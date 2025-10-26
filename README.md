@@ -1,4 +1,4 @@
-# portfolio-data-analytics-krisley
+# portfolio-data-analytics-gregory
 # Dashboard de Performance Logística (Power BI)
 
 Este projeto foi desenvolvido para simular e analisar o **desempenho operacional de uma malha ferroviária**, aplicando conceitos de **Business Intelligence, Governança de Dados e Storytelling Analítico**.  
