@@ -1,16 +1,16 @@
-# 🚂 Dashboard de Performance Logística (Power BI)
+# Dashboard de Performance Logística (Power BI)
 
 Este projeto foi desenvolvido para simular e analisar o **desempenho operacional de uma malha ferroviária**, aplicando conceitos de **Business Intelligence, Governança de Dados e Storytelling Analítico**.  
 O painel foi criado no Power BI Desktop e integra métricas de **Saturação**, **Tempo Parado**, **Transit Time** e **Eficiência Operacional (IEC)**.
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 Demonstrar como dados operacionais podem ser transformados em **insights gerenciais e indicadores de eficiência**, apoiando a tomada de decisão em contextos logísticos reais.                
 
 ---
 
-## 🧱 Estrutura do Projeto
+## Estrutura do Projeto
 
 | Estrutura de Pastas | Descrição |
 |----------------------|------------|
@@ -30,7 +30,7 @@ Demonstrar como dados operacionais podem ser transformados em **insights gerenci
 
 ---
 
-## 🧮 Métricas Principais (DAX)
+## Métricas Principais (DAX)
 - **Transit Time (h):** tempo médio de deslocamento dos trens  
 - **Tempo Parado (%):** proporção de tempo ocioso em relação ao total da operação  
 - **Saturação (%):** uso da capacidade bruta por trecho  
@@ -38,7 +38,7 @@ Demonstrar como dados operacionais podem ser transformados em **insights gerenci
 
 ---
 
-## 📊 Storytelling Analítico
+## Storytelling Analítico
 O painel é composto por **três visões integradas**, que se complementam para fornecer uma leitura completa da operação:
 
 1. **Operação:** panorama geral de desempenho da malha ferroviária  
@@ -49,7 +49,7 @@ Cada página foi construída com foco em **clareza executiva, narrativa analíti
 
 ---
 
-## 🧠 Interpretação dos Indicadores
+## Interpretação dos Indicadores
 
 | Situação | Leitura | Ação Recomendada |
 |-----------|----------|------------------|
@@ -60,7 +60,7 @@ Cada página foi construída com foco em **clareza executiva, narrativa analíti
 
 ---
 
-## 🧩 Tecnologias e Ferramentas
+## Tecnologias e Ferramentas
 - **Power BI Desktop** – modelagem, DAX e visualização  
 - **Python (pandas, numpy, faker)** – simulação e tratamento dos dados  
 - **GitHub** – portfólio e publicação oficial  
@@ -70,7 +70,7 @@ Cada página foi construída com foco em **clareza executiva, narrativa analíti
 
 ---
 
-## ☁️ Ambiente e Governança
+## Ambiente e Governança
 
 Por se tratar de um projeto pessoal desenvolvido em **ambiente gratuito (Power BI Desktop)**,  
 a publicação direta no Power BI Service não foi realizada devido à restrição de login corporativo.  
@@ -85,12 +85,12 @@ Mesmo assim, o projeto mantém **padrões de governança e ciclo de vida analít
 | **Data Quality** | Validação de consistência, completude e integridade |
 | **Documentação (GitHub)** | Centralização e rastreabilidade do projeto |
 
-💡 As versões intermediárias e arquivos de apoio estão **armazenados localmente**, com controle de versionamento via **VS Code**.  
+💡As versões intermediárias e arquivos de apoio estão **armazenados localmente**, com controle de versionamento via **VS Code**.  
 O repositório do GitHub contém a **versão oficial e consolidada** do projeto.
 
 ---
 
-## 🧹 Data Quality Check
+## Data Quality Check
 
 | Métrica | Resultado | Interpretação |
 |----------|------------|----------------|
