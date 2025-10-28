@@ -81,6 +81,24 @@ O projeto foi construído com dados simulados e integra etapas de **ingestão, m
 
 ---
 
+## 📊 Métricas e Fórmulas DAX
+
+| **Métrica** | **Fórmula DAX** | **Descrição** |
+|--------------|-----------------|----------------|
+| **Transit Time (h)** | ```DAX<br>AVERAGE(stg_dados_operacao_raw[tempo_transit])``` | Tempo médio de deslocamento |
+| **Tempo Parado (%)** | ```DAX<br>DIVIDE(<br> SUM(stg_dados_operacao_raw[tempo_parado]),<br> SUM(stg_dados_operacao_raw[tempo_transit]) + SUM(stg_dados_operacao_raw[tempo_parado])<br>)``` | Percentual de tempo ocioso |
+| **Saturação (%)** | ```DAX<br>DIVIDE(<br> SUM(fato_operacao_logistica[carga_transportada]),<br> SUM(fato_operacao_logistica[capacidade_bruta])<br>)``` | Uso da capacidade |
+| **IEC (Eficiência Operacional)** | ```DAX<br>DIVIDE(<br> SUM(stg_dados_operacao_raw[km_percorrido]),<br> SUM(stg_dados_operacao_raw[tempo_transit]) + SUM(stg_dados_operacao_raw[tempo_parado])<br>) * 10``` | Índice composto de eficiência |
+| **Eficiência Operacional (IEC%)** | ```DAX<br>DIVIDE(<br> SUM(stg_dados_operacao_raw[km_percorrido]),<br> SUM(stg_dados_operacao_raw[tempo_transit]) + SUM(stg_dados_operacao_raw[tempo_parado])<br>) / 10``` | Índice composto de eficiência (em %) |
+| **Média IEC** | ```DAX<br>COALESCE(AVERAGE(stg_dados_operacao_raw[eficiencia_operacional]), 0)``` | Média geral de eficiência |
+| **Média Saturação** | ```DAX<br>COALESCE(AVERAGE(stg_dados_operacao_raw[saturacao]), 0)``` | Média geral da saturação |
+| **Média Tempo Parado** | ```DAX<br>COALESCE(AVERAGE(stg_dados_operacao_raw[tempo_parado]), 0)``` | Média geral do tempo parado |
+| **Insight Operacional (Texto)** | ```DAX<br>VAR mediaIEC = [_Media IEC]<br>VAR mediaSat = [_Media Saturacao]<br>VAR mediaParado = [_Media Tempo Parado]<br>RETURN<br>SWITCH(<br> TRUE(),<br> mediaIEC < 60 && mediaSat > 90,<br>  "⚠️ Alta saturação e baixa eficiência: indício de gargalo operacional.",<br> mediaParado > 40 && mediaIEC < 60,<br>  "⚠️ Tempo parado elevado impactando a eficiência da via.",<br> mediaIEC > 80 && mediaSat >= 70 && mediaSat <= 90,<br>  "✅ Operação equilibrada: boa utilização da capacidade e fluidez.",<br> mediaSat < 60 && mediaIEC < 60,<br>  "ℹ️ Capacidade subutilizada: há espaço para otimização.",<br> "Operação dentro da normalidade."<br>)``` | Gera texto automático de insight conforme desempenho operacional |
+
+
+
+---
+
 ## Métricas e Fórmulas DAX
 
 | Métrica | Fórmula | Descrição |
@@ -148,3 +166,4 @@ SWITCH(
 
 Mesmo em ambiente gratuito, o projeto mantém as práticas de **Data Governance, Data Quality e Modelagem Dimensional**.  
 A estrutura é escalável para ambientes corporativos com **Deployment Pipeline real** e integração com **Power BI Service**.
+
