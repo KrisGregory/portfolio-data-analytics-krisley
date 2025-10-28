@@ -81,7 +81,7 @@ O projeto foi construído com dados simulados e integra etapas de **ingestão, m
 
 ---
 
-## 📊 Métricas e Fórmulas DAX
+## Métricas e Fórmulas DAX
 
 | **Métrica** | **Fórmula DAX** | **Descrição** |
 |--------------|-----------------|----------------|
@@ -94,47 +94,6 @@ O projeto foi construído com dados simulados e integra etapas de **ingestão, m
 | **Média Saturação** | ```DAX<br>COALESCE(AVERAGE(stg_dados_operacao_raw[saturacao]), 0)``` | Média geral da saturação |
 | **Média Tempo Parado** | ```DAX<br>COALESCE(AVERAGE(stg_dados_operacao_raw[tempo_parado]), 0)``` | Média geral do tempo parado |
 | **Insight Operacional (Texto)** | ```DAX<br>VAR mediaIEC = [_Media IEC]<br>VAR mediaSat = [_Media Saturacao]<br>VAR mediaParado = [_Media Tempo Parado]<br>RETURN<br>SWITCH(<br> TRUE(),<br> mediaIEC < 60 && mediaSat > 90,<br>  "⚠️ Alta saturação e baixa eficiência: indício de gargalo operacional.",<br> mediaParado > 40 && mediaIEC < 60,<br>  "⚠️ Tempo parado elevado impactando a eficiência da via.",<br> mediaIEC > 80 && mediaSat >= 70 && mediaSat <= 90,<br>  "✅ Operação equilibrada: boa utilização da capacidade e fluidez.",<br> mediaSat < 60 && mediaIEC < 60,<br>  "ℹ️ Capacidade subutilizada: há espaço para otimização.",<br> "Operação dentro da normalidade."<br>)``` | Gera texto automático de insight conforme desempenho operacional |
-
-
-
----
-
-## Métricas e Fórmulas DAX
-
-| Métrica | Fórmula | Descrição |
-|----------|----------|-----------|
-| **Transit Time (h)** | `AVERAGE(stg_dados_operacao_raw[tempo_transit])` | Tempo médio de deslocamento |
-| **Tempo Parado (%)** | `DIVIDE(
-    SUM(stg_dados_operacao_raw[tempo_parado]),
-    SUM(stg_dados_operacao_raw[tempo_transit]) + SUM(stg_dados_operacao_raw[tempo_parado]))` | Percentual de tempo ocioso |
-| **Saturação (%)** | `DIVIDE(SUM(fato_operacao_logistica[carga_transportada]), SUM(fato_operacao_logistica[capacidade_bruta]))` | Uso da capacidade |
-| **IEC (Eficiência Operacional)** | `DIVIDE(
-    SUM(stg_dados_operacao_raw[km_percorrido]),
-    SUM(stg_dados_operacao_raw[tempo_transit]) + SUM(stg_dados_operacao_raw[tempo_parado])) *10` | Índice composto de eficiência |
-| **Eficiência Operacional (IEC%)** | `DIVIDE(
-    SUM(stg_dados_operacao_raw[km_percorrido]),
-    SUM(stg_dados_operacao_raw[tempo_transit]) + SUM(stg_dados_operacao_raw[tempo_parado])
-) /10` | Índice composto de eficiência |
-| **Media IEC** | `COALESCE( AVERAGE(stg_dados_operacao_raw[eficiencia_operacional]),0 )` |
-| **Media Saturacao** | `COALESCE( AVERAGE(stg_dados_operacao_raw[saturacao]) , 0 )`  |
-| **Media Tempo Parado** | `COALESCE( AVERAGE(stg_dados_operacao_raw[tempo_parado]),0 )` |
-| **Insight Operacional (Texto)** | `VAR mediaIEC = [_Media IEC]
-VAR mediaSat = [_Media Saturacao]
-VAR mediaParado = [_Media Tempo Parado]
-RETURN
-SWITCH(
-    TRUE(),
-    mediaIEC < 60 && mediaSat > 90,
-        "⚠️ Alta saturação e baixa eficiência: indício de gargalo operacional.",
-    mediaParado > 40 && mediaIEC < 60,
-        "⚠️ Tempo parado elevado impactando a eficiência da via.",
-    mediaIEC > 80 && mediaSat >= 70 && mediaSat <= 90,
-        "✅ Operação equilibrada: boa utilização da capacidade e fluidez.",
-    mediaSat < 60 && mediaIEC < 60,
-        "ℹ️ Capacidade subutilizada: há espaço para otimização.",
-    "Operação dentro da normalidade."
-)` |
-
 
 ---
 
@@ -166,4 +125,5 @@ SWITCH(
 
 Mesmo em ambiente gratuito, o projeto mantém as práticas de **Data Governance, Data Quality e Modelagem Dimensional**.  
 A estrutura é escalável para ambientes corporativos com **Deployment Pipeline real** e integração com **Power BI Service**.
+
 
